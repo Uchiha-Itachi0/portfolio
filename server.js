@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(userRoute);
-app.use("/krishna/admin008/", adminRoute);
+app.use(process.env.ADMIN, adminRoute);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3001;
